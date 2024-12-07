@@ -20,6 +20,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8 text-law-primary">
+            خبرتنا القانونية
+          </h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-xl mb-6 text-gray-700">
+              أكثر من 10 سنوات من الخبرة في مجال القانون
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="p-6 bg-white rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold text-law-primary mb-2">+10</h3>
+                <p className="text-gray-600">سنوات من الخبرة</p>
+              </div>
+              <div className="p-6 bg-white rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold text-law-primary mb-2">+500</h3>
+                <p className="text-gray-600">قضية ناجحة</p>
+              </div>
+              <div className="p-6 bg-white rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold text-law-primary mb-2">+1000</h3>
+                <p className="text-gray-600">عميل راضٍ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-law-primary">
