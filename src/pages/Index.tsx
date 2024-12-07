@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { MessageSquare } from "lucide-react";
 
 const Index = () => {
   return (
@@ -108,8 +109,9 @@ const Index = () => {
                   href="https://wa.me/966567744028" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-law-primary transition-colors"
+                  className="hover:text-law-primary transition-colors flex items-center justify-center gap-2"
                 >
+                  <MessageSquare size={16} />
                   +966 56 774 4028
                 </a>
                 <br />
