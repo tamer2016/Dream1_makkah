@@ -112,7 +112,7 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Button asChild className="bg-law-primary hover:bg-law-primary/90">
+            <Button asChild className="bg-law-primary hover:bg-law-primary/90 text-white">
               <Link to="/contact">احجز استشارة</Link>
             </Button>
           </div>
