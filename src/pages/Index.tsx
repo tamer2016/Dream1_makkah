@@ -104,7 +104,14 @@ const Index = () => {
                 معلومات التواصل
               </h3>
               <p className="text-gray-600 ltr">
-                +966 56 774 4027
+                <a 
+                  href="https://wa.me/966567744027" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-law-primary transition-colors"
+                >
+                  +966 56 774 4027
+                </a>
                 <br />
                 mb_law@outlook.sa
               </p>
