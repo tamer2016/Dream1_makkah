@@ -39,7 +39,9 @@ const Contact = () => {
               <p className="text-gray-600">
                 المملكة العربية السعودية
                 <br />
-                الرياض، شارع العليا
+                جازان، حي الروضة
+                <br />
+                شارع الملك فهد بن عبدالعزيز
               </p>
               <a 
                 href="https://maps.app.goo.gl/svs71Ge4W93b582H6" 
