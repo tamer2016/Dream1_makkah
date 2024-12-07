@@ -41,6 +41,14 @@ const Contact = () => {
                 <br />
                 الرياض، شارع العليا
               </p>
+              <a 
+                href="https://maps.app.goo.gl/svs71Ge4W93b582H6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-law-primary hover:underline mt-2 inline-block"
+              >
+                عرض الموقع على الخريطة
+              </a>
             </div>
             <div className="text-center p-6 bg-law-light rounded-lg">
               <h2 className="text-xl font-semibold mb-4 text-law-primary">
@@ -49,7 +57,7 @@ const Contact = () => {
               <p className="text-gray-600 ltr">
                 +966 56 774 4027
                 <br />
-                info@example.com
+                mb_law@outlook.sa
               </p>
             </div>
           </div>
