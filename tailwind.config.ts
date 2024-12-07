@@ -25,6 +25,9 @@ export default {
           accent: "#2c5282",
           light: "#e2e8f0",
         },
+        border: "hsl(var(--border))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
       },
       fontFamily: {
         cairo: ["Cairo", "sans-serif"],
