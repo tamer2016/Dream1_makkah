@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      {/* Hero Section */}
       <section className="bg-law-primary text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -48,6 +49,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-law-primary">
@@ -69,15 +71,47 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Contact Section */}
       <section className="py-16 bg-law-light">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8 text-law-primary">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-law-primary">
             تواصل معنا
           </h2>
-          <p className="text-xl mb-8 text-gray-600">
-            نحن هنا لمساعدتك في جميع احتياجاتك القانونية
-          </p>
-          <div className="flex justify-center gap-4">
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4 text-law-primary">
+                العنوان
+              </h3>
+              <p className="text-gray-600">
+                المملكة العربية السعودية
+                <br />
+                جازان، حي الروضة
+                <br />
+                شارع الملك فهد بن عبدالعزيز
+              </p>
+              <a 
+                href="https://maps.app.goo.gl/svs71Ge4W93b582H6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-law-primary hover:underline mt-2 inline-block"
+              >
+                عرض الموقع على الخريطة
+              </a>
+            </div>
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4 text-law-primary">
+                معلومات التواصل
+              </h3>
+              <p className="text-gray-600 ltr">
+                +966 56 774 4027
+                <br />
+                mb_law@outlook.sa
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
             <Button asChild className="bg-law-primary hover:bg-law-primary/90">
               <Link to="/contact">احجز استشارة</Link>
             </Button>
