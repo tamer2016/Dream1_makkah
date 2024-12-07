@@ -47,7 +47,7 @@ const Contact = () => {
                 معلومات التواصل
               </h2>
               <p className="text-gray-600 ltr">
-                +966 50 000 0000
+                +966 56 774 4027
                 <br />
                 info@example.com
               </p>
