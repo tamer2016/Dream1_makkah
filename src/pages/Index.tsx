@@ -105,12 +105,12 @@ const Index = () => {
               </h3>
               <p className="text-gray-600 ltr">
                 <a 
-                  href="https://wa.me/966567744027" 
+                  href="https://wa.me/966567744028" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-law-primary transition-colors"
                 >
-                  +966 56 774 4027
+                  +966 56 774 4028
                 </a>
                 <br />
                 mb_law@outlook.sa
