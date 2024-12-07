@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Scale } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +9,9 @@ const Navbar = () => {
     <nav className="bg-law-primary text-white py-4">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-2xl font-bold">
-            مكتب المحامي محمد بجوي
+          <Link to="/" className="flex items-center gap-2">
+            <Scale className="h-8 w-8 text-law-secondary" />
+            <span className="text-2xl font-bold">مكتب المحامي محمد بجوي</span>
           </Link>
           
           {/* Mobile menu button */}
