@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs, query, orderBy } from "firebase/firestore";
+import { collection, getDocs, query, orderBy, Timestamp } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 
 interface Message {
@@ -8,9 +8,7 @@ interface Message {
   email: string;
   phone: string;
   message: string;
-  createdAt: {
-    toDate: () => Date;
-  };
+  createdAt: Timestamp;
 }
 
 const Admin = () => {
@@ -20,15 +18,15 @@ const Admin = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const messagesQuery = query(
-          collection(db, "messages"),
-          orderBy("createdAt", "desc")
-        );
-        const querySnapshot = await getDocs(messagesQuery);
-        const messagesData = querySnapshot.docs.map((doc) => ({
+        const messagesRef = collection(db, "messages");
+        const q = query(messagesRef, orderBy("createdAt", "desc"));
+        const snapshot = await getDocs(q);
+        
+        const messagesData = snapshot.docs.map(doc => ({
           id: doc.id,
-          ...doc.data(),
+          ...doc.data()
         })) as Message[];
+        
         setMessages(messagesData);
       } catch (error) {
         console.error("Error fetching messages:", error);
@@ -76,7 +74,7 @@ const Admin = () => {
                 <div>
                   <h3 className="font-semibold text-law-primary">تاريخ الإرسال:</h3>
                   <p>
-                    {message.createdAt?.toDate().toLocaleDateString("ar-SA", {
+                    {message.createdAt.toDate().toLocaleDateString("ar-SA", {
                       year: "numeric",
                       month: "long",
                       day: "numeric",
