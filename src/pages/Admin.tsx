@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, orderBy, Timestamp } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 interface Message {
   id: string;
@@ -22,10 +30,19 @@ const Admin = () => {
         const q = query(messagesRef, orderBy("createdAt", "desc"));
         const snapshot = await getDocs(q);
         
-        const messagesData = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        })) as Message[];
+        // Transform the data immediately after fetching
+        const messagesData: Message[] = [];
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          messagesData.push({
+            id: doc.id,
+            name: data.name || "",
+            email: data.email || "",
+            phone: data.phone || "",
+            message: data.message || "",
+            createdAt: data.createdAt as Timestamp,
+          });
+        });
         
         setMessages(messagesData);
       } catch (error) {
@@ -52,43 +69,36 @@ const Admin = () => {
         <h1 className="text-3xl font-bold text-center mb-12 text-law-primary">
           الرسائل المستلمة
         </h1>
-        <div className="grid gap-6">
-          {messages.map((message) => (
-            <div
-              key={message.id}
-              className="bg-white p-6 rounded-lg shadow-md"
-            >
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <h3 className="font-semibold text-law-primary">الاسم:</h3>
-                  <p>{message.name}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-law-primary">البريد الإلكتروني:</h3>
-                  <p className="ltr">{message.email}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-law-primary">رقم الهاتف:</h3>
-                  <p className="ltr">{message.phone}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-law-primary">تاريخ الإرسال:</h3>
-                  <p>
-                    {message.createdAt.toDate().toLocaleDateString("ar-SA", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </p>
-                </div>
-              </div>
-              <div>
-                <h3 className="font-semibold text-law-primary">الرسالة:</h3>
-                <p className="whitespace-pre-wrap">{message.message}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>الاسم</TableHead>
+              <TableHead>البريد الإلكتروني</TableHead>
+              <TableHead>رقم الهاتف</TableHead>
+              <TableHead>تاريخ الإرسال</TableHead>
+              <TableHead>الرسالة</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {messages.map((message) => (
+              <TableRow key={message.id}>
+                <TableCell>{message.name}</TableCell>
+                <TableCell className="ltr">{message.email}</TableCell>
+                <TableCell className="ltr">{message.phone}</TableCell>
+                <TableCell>
+                  {message.createdAt.toDate().toLocaleDateString("ar-SA", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </TableCell>
+                <TableCell className="max-w-md">
+                  <div className="whitespace-pre-wrap">{message.message}</div>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
       </div>
     </div>
   );
