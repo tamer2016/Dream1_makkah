@@ -9,7 +9,7 @@ const Index = () => {
       <section className="bg-law-primary text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            مكتب المحامي محمد بجوي
+            مكتب المحامي عبدالعزيز بن إبراهيم الدريبي
           </h1>
           <p className="text-xl mb-8">
             خبرة قانونية موثوقة في خدمتكم
@@ -22,7 +22,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Experience Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-law-primary">
@@ -50,7 +49,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-law-primary">
@@ -87,9 +85,9 @@ const Index = () => {
               <p className="text-gray-600">
                 المملكة العربية السعودية
                 <br />
-                جازان، حي الروضة
+                مكة المكرمة
                 <br />
-                شارع الملك فهد بن عبدالعزيز
+                4243 طريق الأمير سلطان بن عبد العزيز
               </p>
               <a 
                 href="https://maps.app.goo.gl/svs71Ge4W93b582H6" 
@@ -106,13 +104,13 @@ const Index = () => {
               </h3>
               <p className="text-gray-600 ltr">
                 <a 
-                  href="https://wa.me/966567744028" 
+                  href="https://wa.me/966555582378" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-law-primary transition-colors flex items-center justify-center gap-2"
                 >
                   <MessageSquare size={16} />
-                  +966 56 774 4028
+                  +966 55 558 2378
                 </a>
                 <br />
                 mb_law@outlook.sa

@@ -15,9 +15,9 @@ const Contact = () => {
               <p className="text-gray-600">
                 المملكة العربية السعودية
                 <br />
-                جازان، حي الروضة
+                مكة المكرمة
                 <br />
-                شارع الملك فهد بن عبدالعزيز
+                4243 طريق الأمير سلطان بن عبد العزيز
               </p>
               <a 
                 href="https://maps.app.goo.gl/svs71Ge4W93b582H6" 
@@ -33,7 +33,7 @@ const Contact = () => {
                 معلومات التواصل
               </h2>
               <p className="text-gray-600 ltr">
-                +966 56 774 4027
+                +966 55 558 2378
                 <br />
                 mb_law@outlook.sa
               </p>
