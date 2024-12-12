@@ -20,7 +20,7 @@ const Contact = () => {
                 4243 طريق الأمير سلطان بن عبد العزيز
               </p>
               <a 
-                href="https://maps.app.goo.gl/svs71Ge4W93b582H6" 
+                href="https://maps.app.goo.gl/4243+Prince+Sultan+Bin+Abdulaziz+Rd,+Makkah+24372" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-law-primary hover:underline mt-2 inline-block"
