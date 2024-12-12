@@ -90,7 +90,7 @@ const Index = () => {
                 4243 طريق الأمير سلطان بن عبد العزيز
               </p>
               <a 
-                href="https://maps.app.goo.gl/4243+Prince+Sultan+Bin+Abdulaziz+Rd,+Makkah+24372" 
+                href="https://maps.google.com/?q=21.3891,39.8579" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-law-primary hover:underline mt-2 inline-block"
