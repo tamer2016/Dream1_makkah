@@ -17,10 +17,10 @@ const Contact = () => {
                 <br />
                 مكة المكرمة
                 <br />
-                4243 طريق الأمير سلطان بن عبد العزيز
+                4243 طريق الأمير سلطان بن عبد العزيز، العوالي
               </p>
               <a 
-                href="https://maps.google.com/?q=21.3891,39.8579" 
+                href="https://maps.google.com/?q=4243+Prince+Sultan+Bin+Abdulaziz+Road+Al+Awali+Mecca+24372+Saudi+Arabia" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-law-primary hover:underline mt-2 inline-block"
