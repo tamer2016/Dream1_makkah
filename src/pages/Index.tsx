@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare, Scale, GraduationCap, FileText } from "lucide-react";
 
 const Index = () => {
   return (
@@ -22,6 +22,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Experience Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-law-primary">
@@ -49,6 +50,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-law-primary">
@@ -60,6 +62,9 @@ const Index = () => {
                 key={index}
                 className="p-6 border rounded-lg hover:shadow-lg transition-shadow"
               >
+                <div className="flex justify-center mb-4">
+                  <service.icon className="w-12 h-12 text-law-secondary" />
+                </div>
                 <h3 className="text-xl font-semibold mb-4 text-law-primary">
                   {service.title}
                 </h3>
@@ -133,14 +138,17 @@ const services = [
   {
     title: "استشارات قانونية",
     description: "نقدم استشارات قانونية شاملة في مختلف المجالات",
+    icon: Scale
   },
   {
     title: "تمثيل قانوني",
     description: "نمثل عملائنا في المحاكم وأمام الجهات القضائية",
+    icon: GraduationCap
   },
   {
     title: "صياغة العقود",
     description: "نقدم خدمات صياغة ومراجعة العقود القانونية",
+    icon: FileText
   },
 ];
 
