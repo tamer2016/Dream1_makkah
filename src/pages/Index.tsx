@@ -10,7 +10,6 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             مكتب المحامي عبدالعزيز بن إبراهيم الدريبي
-            tamer
           </h1>
           <p className="text-xl mb-8">
             خبرة قانونية موثوقة في خدمتكم
